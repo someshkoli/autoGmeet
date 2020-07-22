@@ -1,6 +1,7 @@
 const express = require('express'),
   bodyParser = require('body-parser'),
   app = express(),
+  morgan = require('morgan'),
   controllers = {
     PING: require('./lib/routes').ping,
     JOIN: require('./lib/routes').join,
@@ -9,6 +10,9 @@ const express = require('express'),
   };
   
 require('dotenv').config(),
+
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
+
 app.use(bodyParser.urlencoded({extended : false}));
 
 app.get('/', controllers.PING);
