@@ -29,7 +29,7 @@ class HomeBody extends StatefulWidget {
 }
 
 class _HomeBodyState extends State<HomeBody> {
-  String host = 'http://192.168.0.107:9999';
+  String host = 'http://35.240.254.219:9999';
   String inputText;
   @override
   Widget build(BuildContext context) {
@@ -123,21 +123,21 @@ class _HomeBodyState extends State<HomeBody> {
             ),
             children: <Widget>[
               SimpleDialogOption(
-                onPressed: () => joinMeeting('1'),
+                onPressed: () => joinMeeting('0'),
                 child: const Text(
                   'first',
                   style: TextStyle(fontSize: 29),
                 ),
               ),
               SimpleDialogOption(
-                onPressed: () => joinMeeting('2'),
+                onPressed: () => joinMeeting('1'),
                 child: const Text(
                   'Second',
                   style: TextStyle(fontSize: 29),
                 ),
               ),
               SimpleDialogOption(
-                onPressed: () => joinMeeting('3'),
+                onPressed: () => joinMeeting('2'),
                 child: const Text(
                   'third',
                   style: TextStyle(fontSize: 29),
